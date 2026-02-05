@@ -6,7 +6,7 @@ namespace :chatwoot do
     desc 'Toggle between Chatwoot variants with interactive menu'
     task toggle_variant: :environment do
       # Only allow in development environment
-      return unless Rails.env.development?
+      next unless Rails.env.development?
 
       show_current_variant
       show_variant_menu
@@ -15,7 +15,7 @@ namespace :chatwoot do
 
     desc 'Show current Chatwoot variant status'
     task show_variant: :environment do
-      return unless Rails.env.development?
+      next unless Rails.env.development?
 
       show_current_variant
     end
