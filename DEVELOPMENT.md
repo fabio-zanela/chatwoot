@@ -183,6 +183,29 @@ This will display:
 - Deployment environment
 - Pricing plan
 
+### Troubleshooting
+
+#### Captain not showing up after switching variant
+
+If Captain features are not appearing after switching to Enterprise/Cloud variant:
+
+1. **Clear your browser cache and reload**: The frontend caches feature flags
+2. **Verify the variant is set correctly**:
+   ```bash
+   bundle exec rails chatwoot:dev:show_variant
+   ```
+3. **Check OpenAI API key is configured**: Captain requires OpenAI credentials
+4. **Restart your development server**: Sometimes a restart helps pick up configuration changes
+5. **Check browser console for errors**: Look for any JavaScript errors related to Captain
+
+#### How to verify Captain is enabled
+
+1. After switching to Enterprise/Cloud and configuring OpenAI credentials
+2. Log into your Chatwoot dashboard
+3. Navigate to Settings → Account Settings
+4. You should see "Captain" in the settings menu
+5. You should also see AI-powered features in the conversation editor
+
 ## Additional Resources
 
 - [Official Documentation](https://www.chatwoot.com/help-center)
